@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="flex justify-center flex-col gap-4 items-center h-screen bg-white text-black">
+  <form class="myform  flex justify-center flex-col items-center" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="mx-auto border px-8 py-2 rounded-full bg-black text-white mt-8" type="submit">Save Categories</button>
+  </form>
+
+</div>
+{% endblock content %}
