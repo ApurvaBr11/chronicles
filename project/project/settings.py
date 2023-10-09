@@ -16,21 +16,10 @@ SECRET_KEY = 'django-insecure-t7(wu3xcfe7%oj_-d5d&ai4%o*(gm9+2=yi1)*(%7)k($1u&-%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'Rq17ytkuAnMMnIq2cvFw',
-        'HOST': 'containers-us-west-91.railway.app',
-        'PORT': '6128',
-    }
-}
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -101,6 +90,16 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Rq17ytkuAnMMnIq2cvFw',
+#         'HOST': 'containers-us-west-91.railway.app',
+#         'PORT': '6128',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -140,9 +139,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "media/"
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
 
